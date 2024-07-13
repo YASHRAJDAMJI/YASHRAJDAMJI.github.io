@@ -85,8 +85,9 @@
             });
 
             noBtn.addEventListener('mouseover', () => {
-                const x = Math.floor(Math.random() * (window.innerWidth - noBtn.offsetWidth));
-                const y = Math.floor(Math.random() * (window.innerHeight - noBtn.offsetHeight));
+                const offset = 50; // Distance to move
+                const x = yesBtn.offsetLeft + (Math.random() * offset - offset / 2);
+                const y = yesBtn.offsetTop + (Math.random() * offset - offset / 2);
                 noBtn.style.position = 'absolute';
                 noBtn.style.left = `${x}px`;
                 noBtn.style.top = `${y}px`;
